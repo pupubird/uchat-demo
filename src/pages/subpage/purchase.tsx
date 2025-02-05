@@ -20,6 +20,7 @@ export default function Purchase() {
     const [nodeCount, setNodeCount] = useState<number | null>(null);
     const [saleConfig, setSaleConfig] = useState<any | null>(null);
     const [walletAddresses, setWalletAddresses] = useState<string[]>([]);
+    const [whitelists, setWhitelists] = useState<string[]>([]);
     const [result, setResult] = useState<string>("");
 
     // Fetch current batch
@@ -82,6 +83,22 @@ export default function Purchase() {
         }
     };
 
+    //
+    const getWhitelistByBatch = async () => {
+        if (batchId === null) {
+            setResult("请先获取当前批次");
+            return;
+        }
+        try {
+            const addresses = await uchatNodeService.getWhitelist(batchId);
+            setWhitelists(addresses);
+            setResult(`批次 ${batchId} 的白名单地址: ${addresses.join(", ")}`);
+        } catch (error) {
+            console.error(error);
+            setResult("获取批次白名单地址失败");
+        }
+    };
+
     // Log account changes
     useEffect(() => {
         console.log("Current account:", account);
@@ -105,6 +122,9 @@ export default function Purchase() {
                 </Button>
                 <Button variant="contained" onClick={getWalletAddressesByBatch} disabled={batchId === null}>
                     获取当前批次的节点钱包地址
+                </Button>
+                <Button variant="contained" onClick={getWhitelistByBatch} disabled={batchId === null}>
+                    获取当前批次的白名单地址
                 </Button>
             </Box>
             <Box sx={{ marginTop: "20px" }}>

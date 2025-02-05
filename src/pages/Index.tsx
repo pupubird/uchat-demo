@@ -51,7 +51,7 @@ export default function Index() {
           </li>
           <li>
             <strong>UchatNode合约地址：</strong>
-            <span>0xcF052Cb400e327fB71B50777D321Bb4fdFF3f51A</span>
+            <span>0xC00c05D51bAc4BB6266Ee2dC33b7C41Aa5cc1F23</span>
           </li>
         </ul>
       </Container>

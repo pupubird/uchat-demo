@@ -112,6 +112,20 @@ export class UchatNodeService {
         }
     }
 
+    async getWhitelist(batchId: number) {
+        const sdk = new ThirdwebSDK(chainConst);
+        const contract = await sdk.getContract(contractAddress, abi);
+        try {
+            const result = await contract.call(
+                "getWhitelist", [batchId]
+            );
+            return result;
+        } catch (e) {
+            console.error(e);
+            return [];
+        }
+    }
+
     async getWalletAddressesByBatch(batch: number) {
         const sdk = new ThirdwebSDK(chainConst);
         const contract = await sdk.getContract(contractAddress, abi);
