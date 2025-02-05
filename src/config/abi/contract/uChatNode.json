@@ -145,6 +145,19 @@
 		"inputs": [
 			{
 				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
 				"name": "_uchatToken",
 				"type": "address"
 			},
@@ -239,12 +252,12 @@
 	{
 		"inputs": [
 			{
-				"internalType": "address",
-				"name": "newOwner",
-				"type": "address"
+				"internalType": "uint256",
+				"name": "_interval",
+				"type": "uint256"
 			}
 		],
-		"name": "transferOwnership",
+		"name": "setReleaseInterval",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -790,6 +803,19 @@
 	{
 		"inputs": [],
 		"name": "REFERRAL_REWARD_PERCENT",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "releaseInterval",
 		"outputs": [
 			{
 				"internalType": "uint256",
