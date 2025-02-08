@@ -39,7 +39,7 @@ root.render(
   <React.StrictMode>
     <I18nextProvider i18n={i18n}>
       <Router>
-        <ThirdwebProvider clientId={clientId} activeChain={'binance-testnet'} supportedWallets={[
+        <ThirdwebProvider clientId={clientId} activeChain={'binance'} supportedWallets={[
           metamaskWallet(),
           trustWallet(),
           coinbaseWallet(),

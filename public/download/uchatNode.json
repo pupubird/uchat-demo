@@ -2,6 +2,24 @@
 	{
 		"inputs": [
 			{
+				"internalType": "address",
+				"name": "wallet",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "addDividend",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
 				"internalType": "uint256",
 				"name": "totalSupply",
 				"type": "uint256"
@@ -86,6 +104,19 @@
 		"inputs": [
 			{
 				"internalType": "address",
+				"name": "_dividendWallet",
+				"type": "address"
+			}
+		],
+		"name": "configDividendWallet",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
 				"name": "_foundationWallet",
 				"type": "address"
 			}
@@ -135,32 +166,20 @@
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "renounceOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"inputs": [
 			{
-				"internalType": "address",
-				"name": "newOwner",
-				"type": "address"
+				"internalType": "uint256",
+				"name": "amountPerNode",
+				"type": "uint256"
 			}
 		],
-		"name": "transferOwnership",
+		"name": "distributeDividendToAll",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
 		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_uchatToken",
-				"type": "address"
-			},
 			{
 				"internalType": "address",
 				"name": "_usdtToken",
@@ -250,6 +269,13 @@
 		"type": "function"
 	},
 	{
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "uint256",
@@ -258,6 +284,37 @@
 			}
 		],
 		"name": "setReleaseInterval",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "wallet",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "subtractDividend",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -353,6 +410,19 @@
 	},
 	{
 		"inputs": [],
+		"name": "dividendWallet",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
 		"name": "FOUNDATION_PERCENT",
 		"outputs": [
 			{
@@ -399,6 +469,25 @@
 			}
 		],
 		"name": "getClaimableUchat",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "wallet",
+				"type": "address"
+			}
+		],
+		"name": "getDividendBalance",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -468,6 +557,11 @@
 					{
 						"internalType": "uint256",
 						"name": "startReleaseTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "dividendsUchat",
 						"type": "uint256"
 					}
 				],
@@ -689,6 +783,11 @@
 				"internalType": "uint256",
 				"name": "startReleaseTime",
 				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "dividendsUchat",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
@@ -903,6 +1002,11 @@
 			{
 				"internalType": "uint256",
 				"name": "startReleaseTime",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "dividendsUchat",
 				"type": "uint256"
 			}
 		],

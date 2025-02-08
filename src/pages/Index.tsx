@@ -1,6 +1,8 @@
 import { Container, Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { getToken } from "@/config/tokens";
+import { getContract } from "@/config/contracts";
 
 export default function Index() {
   const [open, setOpen] = useState(false);
@@ -43,15 +45,15 @@ export default function Index() {
         <ul>
           <li>
             <strong>USDT合约地址：</strong>
-            <span>0xF6Ba08f748c5B65bDBD4ab98252e5bF55430Ac39</span>
+            <span>{getToken('usdt')}</span>
           </li>
           <li>
             <strong>Uchat合约地址：</strong>
-            <span>0x56C1EB14f0064CB3B5ED78F9E5122020d07Fc4dc</span>
+            <span>{getToken('uchat')}</span>
           </li>
           <li>
             <strong>UchatNode合约地址：</strong>
-            <span>0xD56ba0Eac228Ee660a51F8bC84e512574386b31f</span>
+            <span>{getContract('uchatNode')}</span>
           </li>
         </ul>
       </Container>

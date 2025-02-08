@@ -6,7 +6,7 @@ interface Contracts {
 
 export const contracts: Contracts = {
   uchatNode: {
-    97: "0xD56ba0Eac228Ee660a51F8bC84e512574386b31f",
+    56: "0xbE6672a8aC4143e5582170cb43e9f6C67b6eb09E",
   }
 };
 

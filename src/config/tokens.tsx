@@ -3,13 +3,23 @@ import { TokenInfo } from "@/entities/TokenInfoEntity";
 import { isNull } from "@/utils/string";
 export const tokens: { [index: string]: { [index: string]: TokenInfo } } = {
     usdt: {
-        97: {
-            contract: "0xF6Ba08f748c5B65bDBD4ab98252e5bF55430Ac39",
+        56: {
+            contract: "0x55d398326f99059fF775485246999027B3197955",
             decimal: 18,
             name: 'TetherUSD',
             symbol: 'USDT',
             lp: '',
             logo: '/token/usdt.png',
+        }
+    },
+    uchat: {
+        56: {
+            contract: "0x55d398326f99059fF775485246999027B3197955",
+            decimal: 18,
+            name: 'Uchat',
+            symbol: 'UCHAT',
+            lp: '',
+            logo: '/token/uchat.png',
         }
     },
 }
