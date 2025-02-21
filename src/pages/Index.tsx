@@ -29,6 +29,9 @@ export default function Index() {
             <Link to='/subpage/claim'>领取收益</Link>
           </li>
           <li>
+            <Link to='/subpage/dailyDividendDistributor'>节点分红</Link>
+          </li>
+          <li>
             {/* 点击时打开提示框 */}
             <Button variant="text" onClick={handleOpenDialog}>
               领取测试USDT
@@ -37,6 +40,11 @@ export default function Index() {
           <li>
             <a href='/download/uchatNode.json' download>
               UchatNode的ABI下载
+            </a>
+          </li>
+          <li>
+            <a href='/download/dailyDividendDistributor.json' download>
+              节点分红合约的ABI下载
             </a>
           </li>
         </ul>
@@ -54,6 +62,10 @@ export default function Index() {
           <li>
             <strong>UchatNode合约地址：</strong>
             <span>{getContract('uchatNode')}</span>
+          </li>
+          <li>
+            <strong>节点分红合约地址：</strong>
+            <span>{getContract('dailyDividendDistributor')}</span>
           </li>
         </ul>
       </Container>

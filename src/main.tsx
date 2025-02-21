@@ -15,6 +15,7 @@ import i18n from './utils/i18n'; // Ensure the path is correct
 import { I18nextProvider } from 'react-i18next';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import DailyDividendDistributor from "./pages/subpage/dailyDividendDistributor";
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
@@ -53,6 +54,7 @@ root.render(
                   <Route path="/" element={<Index />} />
                   <Route path="/subpage/purchase" element={<Purchase />} />
                   <Route path="/subpage/claim" element={<Claim />} />
+                  <Route path="/subpage/dailyDividendDistributor" element={<DailyDividendDistributor />} />
                 </Routes>
               </Layout>
         </ThirdwebProvider>
