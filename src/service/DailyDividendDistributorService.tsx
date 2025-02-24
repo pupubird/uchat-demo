@@ -24,7 +24,7 @@ export class DailyDividendDistributorService {
         const contract = await sdk.getContract(contractAddress, abi);
         try {
             const balance = await contract.call(
-                "isWalletExist", [account]
+                "getWalletBalance", [account]
             );
             return Number(balance);
         } catch (e) {
